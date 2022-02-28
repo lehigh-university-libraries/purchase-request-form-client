@@ -1,4 +1,10 @@
+#VS Code
 settings.json
+launch.json
+
+# Generated
 lib
 css
+
+# Auth
 js/credentials.js
