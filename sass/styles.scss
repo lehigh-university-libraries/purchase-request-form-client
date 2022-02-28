@@ -1,6 +1,14 @@
 @charset "utf-8";
 
-$body-background-color: lightgreen;
+$goblet-gray: #d1ccbd;
+$better-than-maroon-red: #f9423a;
+$rocky-rapids-blue: #81b0d2;
+
+$body-background-color: $goblet-gray;
+$primary: $rocky-rapids-blue;
+
+$widescreen-enabled: false;
+$fullhd-enabled: false;
 
 // @import "../lib/bulma-0.9.3/bulma/bulma.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/utilities/_all.sass";
@@ -8,4 +16,6 @@ $body-background-color: lightgreen;
 @import "../lib/bulma-0.9.3/bulma/sass/elements/button.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/elements/container.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/elements/title.sass";
+@import "../lib/bulma-0.9.3/bulma/sass/components/card.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/form/_all.sass";
+@import "../lib/bulma-0.9.3/bulma/sass/layout/section.sass";

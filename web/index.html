@@ -7,20 +7,50 @@
     <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
-    <h1 class="title">Purchase Request Workflow</h1>
 
-    <p class="subtitle">
-      Form Client POC
-    </p>
+    <div class="section">
 
-    <div class="field">
-      <div class="control">
-        <input class="input" type="text" placeholder="Input">
+      <div class="container">
+
+        <h1 class="title">Purchase Request Workflow</h1>
+
+        <p class="subtitle">
+          Form Client POC
+        </p>
+
+        <div class="card">
+          <div class="card-header">
+            <p class="card-header-title">Request a Purchase</p>
+          </div>
+
+          <div class="card-content">
+
+            <div class="field">
+              <label class="label" for="title_input">Title</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter the title" id="title_input">
+              </div>
+            </div>
+    
+            <div class="field">
+              <label class="label" for="contributor_input">Contributor</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter the author or other contributor" id="contributor_input">
+              </div>
+            </div>
+    
+            <div class="buttons">
+              <button class="button is-primary">Submit Purchase Request</button>
+            </div>
+    
+          </div>
+
+        </div>
+
       </div>
+
     </div>
 
-    <div class="buttons">
-      <button class="button is-primary">Submit Purchase Request</button>
-    </div>
+
   </body>
 </html>
