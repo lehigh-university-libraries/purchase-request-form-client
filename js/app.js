@@ -31,9 +31,17 @@ function sendNewRequest() {
     data: JSON.stringify(request_data),
     success: function(data, status, xhr) {
       console.log("call succeeded");
+      notifySuccess(title, contributor);
     },
     error: function(xhr, status, error) {
       console.log("failed with status " + status + " and error: " + error);
     }
   });
+}
+
+function notifySuccess(title, contributor) {
+  let clone = $("#success_template").get(0).content.cloneNode(true);
+  $(".text", clone)
+    .text("Successfully submitted purchase request for " + title + " by " + contributor + ".");
+  $("main").append(clone);
 }
