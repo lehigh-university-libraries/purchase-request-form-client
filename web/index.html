@@ -9,50 +9,63 @@
     <script type="text/javascript" src="../js/credentials.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
   </head>
-  <body>
+  <body class=>
 
-    <main class="section">
+    <div class="columns is-flex-direction-column is-fullheight-100vh">
 
-      <div class="container">
+      <div class="column">
 
-        <h1 class="title">Purchase Request Workflow</h1>
+        <main class="section">
 
-        <p class="subtitle">
-          Form Client POC
-        </p>
+          <div class="container">
 
-        <div class="card">
-          <div class="card-header">
-            <p class="card-header-title">Request a Purchase</p>
+            <h1 class="title">Purchase Request Workflow</h1>
+
+            <p class="subtitle">
+              Form Client POC
+            </p>
+
+            <div class="card">
+              <div class="card-header">
+                <p class="card-header-title">Request a Purchase</p>
+              </div>
+
+              <div class="card-content">
+
+                <div class="field">
+                  <label class="label" for="title_input">Title</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Enter the title" id="title_input">
+                  </div>
+                </div>
+        
+                <div class="field">
+                  <label class="label" for="contributor_input">Contributor</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Enter the author or other contributor" id="contributor_input">
+                  </div>
+                </div>
+        
+                <div class="buttons">
+                  <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
+                </div>
+        
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="card-content">
-
-            <div class="field">
-              <label class="label" for="title_input">Title</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Enter the title" id="title_input">
-              </div>
-            </div>
-    
-            <div class="field">
-              <label class="label" for="contributor_input">Contributor</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Enter the author or other contributor" id="contributor_input">
-              </div>
-            </div>
-    
-            <div class="buttons">
-              <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
-            </div>
-    
-          </div>
-
-        </div>
+        </main>
 
       </div>
 
-    </main>
+      <div class="column is-narrow">
+        <footer class="footer">
+          <div class="content has-text-centered">DO NOT use this in production.  Sending credentials over the wire is insecure.</div>
+        </footer>
+      </div>
+    </div>
 
     <template id="success_template">
       <div class="section">
