@@ -21,10 +21,14 @@ function sendNewRequest() {
   let title = $('#title_input').val();
   let contributor = $('#contributor_input').val();
   let format = $("#book_format input:checked").val();
+  let speed = $("#speed input:checked").val();
+  let destination = $("#destination input:checked").val();
   let request_data = {
     title: title,
     contributor: contributor,
     format: format,
+    speed: speed,
+    destination: destination,
   };
   $.ajax({
     url: "http://localhost:8080/purchase-requests",

@@ -50,7 +50,7 @@
                   <div class="control">
                     <label class="label">Book Format</label>
                     <label class="radio">
-                      <input type="radio" name="book_format" value="any" checked>
+                      <input type="radio" name="book_format" value="any">
                       No Preference
                     </label>
                     <label class="radio">
@@ -63,7 +63,47 @@
                     </label>
                   </div>
                 </div>
-                  
+
+                <hr>
+
+                <h2 class="subtitle is-5">Delivery (Print Items)</h2>
+
+                <div class="field" id="speed">
+                  <div class="control">
+                    <label class="label">Vendor Preference</label>
+                    <p>To fulfill print book orders, Lehigh Libraries has added bookstores owned by 
+                    black, indigenous, and people of color to its selection of vendors. 
+                    Would you like us to purchase this title through one of these vendors, 
+                    even if there is a slight delay in receiving the book?</p>             
+                    <label class="radio">
+                      <input type="radio" name="speed" value="BIPOC_Vendors">
+                      BIPOC Vendor                      
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="speed" value="ASAP">
+                      ASAP
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field" id="destination">
+                  <div class="control">
+                    <label class="label">Pick-up Location</label>
+                    <label class="radio">
+                      <input type="radio" name="destination" value="Linderman">
+                      Linderman Desk
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="destination" value="FML">
+                      FML Desk
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="destination" value="Delivery">
+                      Deliver to my office (Faculty)
+                    </label>
+                  </div>
+                </div>
+
                 <div class="buttons">
                   <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
                 </div>
