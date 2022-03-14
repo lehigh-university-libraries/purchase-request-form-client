@@ -20,9 +20,11 @@ function initListener() {
 function sendNewRequest() {
   let title = $('#title_input').val();
   let contributor = $('#contributor_input').val();
+  let format = $("#book_format input:checked").val();
   let request_data = {
     title: title,
     contributor: contributor,
+    format: format,
   };
   $.ajax({
     url: "http://localhost:8080/purchase-requests",
