@@ -18,8 +18,8 @@ function initListener() {
 }
 
 function sendNewRequest() {
-  let title = $('#title_input').val();
-  let contributor = $('#contributor_input').val();
+  let title = normalize($('#title_input').val());
+  let contributor = normalize($('#contributor_input').val());
   let format = $("#book_format input:checked").val();
   let speed = $("#speed input:checked").val();
   let destination = $("#destination input:checked").val();
@@ -43,6 +43,13 @@ function sendNewRequest() {
       console.log("failed with status " + status + " and error: " + error);
     }
   });
+}
+
+function normalize(input) {
+  if (input != null && input.length == 0) {
+    return null;
+  }
+  return input;
 }
 
 function notifySuccess(title, contributor) {
