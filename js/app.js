@@ -18,12 +18,14 @@ function initListener() {
 }
 
 function sendNewRequest() {
+  let reporterName = normalize($('#username_input').val());
   let title = normalize($('#title_input').val());
   let contributor = normalize($('#contributor_input').val());
   let format = $("#book_format input:checked").val();
   let speed = $("#speed input:checked").val();
   let destination = $("#destination input:checked").val();
   let request_data = {
+    reporterName: reporterName,
     title: title,
     contributor: contributor,
     format: format,
