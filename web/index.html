@@ -32,92 +32,129 @@
 
               <div class="card-content">
 
-                <div class="field">
-                  <label class="label" for="username_input">Username</label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Enter your username" id="username_input">
+                <form id="login_input_section">
+                  <div class="field">
+                    <label class="label" for="username_input">Username</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Enter your username" id="username_input">
+                    </div>
                   </div>
-                </div>
-                <hr>
+                  <div class="buttons">
+                    <button id="login_button" class="button is-primary">Login (not really)</button>
+                  </div>
+                </form>
 
-                <h2 class="subtitle is-5">Book Details</h2>
-
-                <div class="field">
-                  <label class="label" for="title_input">Title</label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Enter the title" id="title_input">
-                  </div>
-                </div>
-        
-                <div class="field">
-                  <label class="label" for="contributor_input">Contributor</label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Enter the author or other contributor" id="contributor_input">
-                  </div>
-                </div>
-        
-                <div class="field" id="book_format">
-                  <div class="control">
-                    <label class="label">Book Format</label>
-                    <label class="radio">
-                      <input type="radio" name="book_format" value="any">
-                      No Preference
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="book_format" value="print">
-                      Print
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="book_format" value="electronic">
-                      E-Book
-                    </label>
-                  </div>
+                <div id="login_done_section">
+                  <p>Username: <span id="username"></span></p>
+                  <hr/>
                 </div>
 
-                <hr>
+                <form id="item_input_section">
 
-                <h2 class="subtitle is-5">Delivery (Print Items)</h2>
+                  <h2 class="subtitle is-5">Book Details</h2>
 
-                <div class="field" id="speed">
-                  <div class="control">
-                    <label class="label">Vendor Preference</label>
-                    <p>To fulfill print book orders, Lehigh Libraries has added bookstores owned by 
-                    black, indigenous, and people of color to its selection of vendors. 
-                    Would you like us to purchase this title through one of these vendors, 
-                    even if there is a slight delay in receiving the book?</p>             
-                    <label class="radio">
-                      <input type="radio" name="speed" value="BIPOC_Vendors">
-                      BIPOC Vendor                      
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="speed" value="ASAP">
-                      ASAP
-                    </label>
+                  <div class="field">
+                    <label class="label" for="title_input">Title</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Enter the title" id="title_input">
+                    </div>
                   </div>
+          
+                  <div class="field">
+                    <label class="label" for="contributor_input">Contributor</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Enter the author or other contributor" id="contributor_input">
+                    </div>
+                  </div>
+          
+                  <div class="field" id="book_format">
+                    <div class="control">
+                      <label class="label">Book Format</label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="any" checked="checked">
+                        No Preference
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="print">
+                        Print
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="electronic">
+                        E-Book
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="buttons">
+                    <button id="search_button" class="button is-primary">Continue</button>
+                  </div>
+
+                </form>
+
+                <div id="search_done_section">
+                  <p>Title: <span id="title"></span></p>
+                  <p>Contributor: <span id="contributor"></span></p>
+                  <hr/>
                 </div>
 
-                <div class="field" id="destination">
-                  <div class="control">
-                    <label class="label">Pick-up Location</label>
-                    <label class="radio">
-                      <input type="radio" name="destination" value="Linderman">
-                      Linderman Desk
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="destination" value="FML">
-                      FML Desk
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="destination" value="Delivery">
-                      Deliver to my office (Faculty)
-                    </label>
+                <div id="local_holdings_input_section" class="content">
+                  <h2 class="subtitle is-5">Currently Available</h2>
+                  <p>Do any of these items currently available from the library meet your needs?</p>
+                  <ul id="local_results">
+                  </ul>
+                  <br/>
+                  <p>If not,</p>
+                  <div class="buttons">
+                    <button id="reject_local_holdings_button" class="button is-primary">Continue with Purchase Request</button>
                   </div>
                 </div>
 
-                <div class="buttons">
-                  <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
+                <div id="delivery_input_section">
+
+                  <h2 class="subtitle is-5">Delivery (Print Items)</h2>
+
+                  <div class="field" id="speed">
+                    <div class="control">
+                      <label class="label">Vendor Preference</label>
+                      <p>To fulfill print book orders, Lehigh Libraries has added bookstores owned by 
+                      black, indigenous, and people of color to its selection of vendors. 
+                      Would you like us to purchase this title through one of these vendors, 
+                      even if there is a slight delay in receiving the book?</p>             
+                      <label class="radio">
+                        <input type="radio" name="speed" value="BIPOC_Vendors">
+                        BIPOC Vendor                      
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="speed" value="ASAP">
+                        ASAP
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="field" id="destination">
+                    <div class="control">
+                      <label class="label">Pick-up Location</label>
+                      <label class="radio">
+                        <input type="radio" name="destination" value="Linderman">
+                        Linderman Desk
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="destination" value="FML">
+                        FML Desk
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="destination" value="Delivery">
+                        Deliver to my office (Faculty)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="buttons">
+                    <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
+                  </div>
+
                 </div>
-        
+                  
               </div>
 
             </div>

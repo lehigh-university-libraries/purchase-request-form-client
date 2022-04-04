@@ -18,6 +18,18 @@ label + p {
   margin-bottom: 1rem;
 }
 
+.buttons {
+  margin-top: 1rem;
+}
+
+#login_done_section,
+#item_input_section, 
+#search_done_section, 
+#local_holdings_input_section,
+#delivery_input_section {
+  display: none;
+}
+
 // @import "../lib/bulma-0.9.3/bulma/bulma.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/utilities/_all.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/base/_all.sass";
