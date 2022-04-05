@@ -67,24 +67,6 @@
                     </div>
                   </div>
           
-                  <div class="field" id="book_format">
-                    <div class="control">
-                      <label class="label">Book Format</label>
-                      <label class="radio">
-                        <input type="radio" name="book_format" value="any" checked="checked">
-                        No Preference
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="book_format" value="print">
-                        Print
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="book_format" value="electronic">
-                        E-Book
-                      </label>
-                    </div>
-                  </div>
-
                   <div class="buttons">
                     <button id="search_button" class="button is-primary">Continue</button>
                   </div>
@@ -111,7 +93,25 @@
 
                 <div id="delivery_input_section">
 
-                  <h2 class="subtitle is-5">Delivery (Print Items)</h2>
+                  <h2 class="subtitle is-5">Delivery Preferences</h2>
+
+                  <div class="field" id="format_input">
+                    <div class="control">
+                      <label class="label">Book Format</label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="any" checked="checked">
+                        No Preference
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="print">
+                        Print
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="book_format" value="electronic">
+                        E-Book
+                      </label>
+                    </div>
+                  </div>
 
                   <div class="field" id="speed_input">
                     <div class="control">
@@ -156,6 +156,7 @@
                 </div>
 
                 <div id="delivery_done_section">
+                  <p>Book Format: <span id="format"></span></p>
                   <p>Vendor Preference: <span id="speed"></span></p>
                   <p>Pick-up Location: <span id="destination"></span></p>
                 </div>

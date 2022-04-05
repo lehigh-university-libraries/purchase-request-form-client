@@ -75,11 +75,9 @@ function bootstrapSearch() {
 function search() {
   let title = normalize($('#title_input').val());
   let contributor = normalize($('#contributor_input').val());
-  let format = $("#book_format input:checked").val();
   let request_data = {
     title: title,
     contributor: contributor,
-    format: format,
   };
 
   $.ajax({
@@ -133,7 +131,7 @@ function sendNewRequest() {
   let reporterName = normalize($('#username_input').val());
   let title = normalize($('#title_input').val());
   let contributor = normalize($('#contributor_input').val());
-  let format = $("#book_format input:checked").val();
+  let format = $("#format_input input:checked").val();
   let speed = $("#speed_input input:checked").val();
   let destination = $("#destination_input input:checked").val();
   let request_data = {
@@ -171,6 +169,7 @@ function requestSucceeded(title, contributor) {
   $("#delivery_input_section").hide();
 
   // show the delivery choices
+  $("#format").text($("#format_input input:checked").parent().text().trim());
   $("#speed").text($("#speed_input input:checked").parent().text().trim());
   $("#destination").text($("#destination_input input:checked").parent().text().trim());
   $("#delivery_done_section").show();
