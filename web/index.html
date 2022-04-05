@@ -113,7 +113,7 @@
 
                   <h2 class="subtitle is-5">Delivery (Print Items)</h2>
 
-                  <div class="field" id="speed">
+                  <div class="field" id="speed_input">
                     <div class="control">
                       <label class="label">Vendor Preference</label>
                       <p>To fulfill print book orders, Lehigh Libraries has added bookstores owned by 
@@ -131,7 +131,7 @@
                     </div>
                   </div>
 
-                  <div class="field" id="destination">
+                  <div class="field" id="destination_input">
                     <div class="control">
                       <label class="label">Pick-up Location</label>
                       <label class="radio">
@@ -153,6 +153,11 @@
                     <button id="submit_button" class="button is-primary">Submit Purchase Request</button>
                   </div>
 
+                </div>
+
+                <div id="delivery_done_section">
+                  <p>Vendor Preference: <span id="speed"></span></p>
+                  <p>Pick-up Location: <span id="destination"></span></p>
                 </div>
                   
               </div>

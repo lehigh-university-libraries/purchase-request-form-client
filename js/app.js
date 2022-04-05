@@ -134,8 +134,8 @@ function sendNewRequest() {
   let title = normalize($('#title_input').val());
   let contributor = normalize($('#contributor_input').val());
   let format = $("#book_format input:checked").val();
-  let speed = $("#speed input:checked").val();
-  let destination = $("#destination input:checked").val();
+  let speed = $("#speed_input input:checked").val();
+  let destination = $("#destination_input input:checked").val();
   let request_data = {
     reporterName: reporterName,
     title: title,
@@ -151,7 +151,7 @@ function sendNewRequest() {
     data: JSON.stringify(request_data),
     success: function(data, status, xhr) {
       console.log("call succeeded");
-      notifySuccess(title, contributor);
+      requestSucceeded(title, contributor);
     },
     error: function(xhr, status, error) {
       console.log("failed with status " + status + " and error: " + error);
@@ -166,7 +166,16 @@ function normalize(input) {
   return input;
 }
 
-function notifySuccess(title, contributor) {
+function requestSucceeded(title, contributor) {
+  // hide delivery input
+  $("#delivery_input_section").hide();
+
+  // show the delivery choices
+  $("#speed").text($("#speed_input input:checked").parent().text().trim());
+  $("#destination").text($("#destination_input input:checked").parent().text().trim());
+  $("#delivery_done_section").show();
+
+  // add notification
   let clone = $("#success_template").get(0).content.cloneNode(true);
   $(".text", clone)
     .text("Successfully submitted purchase request for " + title + " by " + contributor + ".");
