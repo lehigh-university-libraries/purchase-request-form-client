@@ -81,7 +81,7 @@ function search() {
   };
 
   $.ajax({
-    url: "http://localhost:8080/search-matches?" + new URLSearchParams(request_data),
+    url: WORKFLOW_SERVICE_BASE_URL + "/search-matches?" + new URLSearchParams(request_data),
     method: "GET",
     contentType: 'application/json',
     success: function(data, status, xhr) {
@@ -143,7 +143,7 @@ function sendNewRequest() {
     destination: destination,
   };
   $.ajax({
-    url: "http://localhost:8080/purchase-requests",
+    url: WORKFLOW_SERVICE_BASE_URL + "/purchase-requests",
     method: "POST",
     contentType: 'application/json',
     data: JSON.stringify(request_data),
