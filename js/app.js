@@ -1,6 +1,7 @@
 $(document).ready(function() {
   initUser();
   initListeners();
+  loadDeliveryOptions();
 
   bootstrap();
 });
@@ -46,6 +47,21 @@ function initListeners() {
   $("#submit_button").on("click", function(event) {
     sendNewRequest();
   });
+}
+
+function loadDeliveryOptions() {
+  for (let i=0; i < DESTINATION_OPTIONS.length; i++) {
+    let destinationOption = DESTINATION_OPTIONS[i];
+    let inputElement = $("<input>")
+      .attr("type", "radio")
+      .attr("name", "destination")
+      .attr("value", destinationOption[0]);
+    let labelElement = $("<label>")
+      .addClass("radio")
+      .text(destinationOption[1])
+      .prepend(inputElement);
+    $("#destination_input .control").append(labelElement);
+  }
 }
 
 function login() {
@@ -117,13 +133,20 @@ function searchSucceeded(data) {
     $("#local_holdings_input_section").show();
   }
   else {
-    // show delivery input
-    $("#delivery_input_section").show();
+    showDeliveryInput();
   }
 }
 
 function rejectLocalHoldings() {
   $("#local_holdings_input_section").hide();
+  showDeliveryInput();
+}
+
+function showDeliveryInput() {
+  // reset to the first destination option being selected
+  $("#destination_input .control label[class=radio]").first().children("input").prop("checked", true);
+
+  // show the delivery panel
   $("#delivery_input_section").show();
 }
 

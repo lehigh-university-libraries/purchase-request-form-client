@@ -6,7 +6,7 @@
     <title>Form Client POC - Purchase Request Workflow</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/credentials.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
   </head>
   <body class=>
@@ -134,18 +134,7 @@
                   <div class="field" id="destination_input">
                     <div class="control">
                       <label class="label">Pick-up Location</label>
-                      <label class="radio">
-                        <input type="radio" name="destination" value="Linderman" checked="checked">
-                        Linderman Desk
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="destination" value="FML">
-                        FML Desk
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="destination" value="Delivery">
-                        Deliver to my office (Faculty)
-                      </label>
+                      <!-- Options defined in config.js, added via app.js -->
                     </div>
                   </div>
 

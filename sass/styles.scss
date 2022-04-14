@@ -31,6 +31,10 @@ label + p {
   display: none;
 }
 
+#destination_input input[type=radio] {
+  margin-right: 0.25rem;
+}
+
 // @import "../lib/bulma-0.9.3/bulma/bulma.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/utilities/_all.sass";
 @import "../lib/bulma-0.9.3/bulma/sass/base/_all.sass";
