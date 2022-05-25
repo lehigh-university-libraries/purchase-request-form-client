@@ -127,7 +127,10 @@ function searchSucceeded(data) {
       let result = data[i];
       let url = CATALOG_URL_FOR_OCLC_NUMBER.replace("{oclc}", result.oclcNumber);
       let link = $("<a>").attr("href", url).attr("target", "_blank").text(result.title);
-      let local_item = $("<li>").append(link).append(" by ").append(result.contributor);
+      let local_item = $("<li>").append(link);
+      if (result.contributor != null) {
+        local_item.append(" by ").append(result.contributor);
+      }
       $("#local_results").append(local_item);
     }
     $("#local_holdings_input_section").show();
