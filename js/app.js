@@ -154,14 +154,14 @@ function showDeliveryInput() {
 }
 
 function sendNewRequest() {
-  let reporterName = normalize($('#username_input').val());
+  let requesterUsername = normalize($('#username_input').val());
   let title = normalize($('#title_input').val());
   let contributor = normalize($('#contributor_input').val());
   let format = $("#format_input input:checked").val();
   let speed = $("#speed_input input:checked").val();
   let destination = $("#destination_input input:checked").val();
   let request_data = {
-    reporterName: reporterName,
+    requesterUsername: requesterUsername,
     title: title,
     contributor: contributor,
     format: format,
